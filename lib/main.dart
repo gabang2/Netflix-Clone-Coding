@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netflix/screen/home_screen.dart';
 import 'package:netflix/widget/bottom_bar.dart';
 
 void main() => runApp(MyApp());
@@ -14,6 +15,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Netflix',
       theme: ThemeData(
           brightness: Brightness.dark,
@@ -26,7 +28,7 @@ class _MyAppState extends State<MyApp> {
           body: TabBarView(
             physics: NeverScrollableScrollPhysics(),
             children: [
-              Container(child: Center(child: Text('1'),),),
+              HomeScreen(),
               Container(child: Center(child: Text('2'),),),
               Container(child: Center(child: Text('3'),),),
               Container(child: Center(child: Text('4'),),),
